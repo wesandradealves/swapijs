@@ -1,0 +1,35 @@
+body, html
+	background: url(assets/imgs/Boson_X_Background_Starfield_1.png) center center / cover no-repeat black
+	+animation('opacity', 1000ms)
+#wrap
+	.view
+		min-height: 100vh
+		width: 100%
+		@extend .flex 
+		flex-flow: column wrap 
+		justify-content: center
+		align-items: center
+		.main-view
+			width: 100%
+			z-index: 2
+			+mq(414px, max)
+				padding: 30px
+	.error
+		background-color: rgba(0,0,0,.75)
+		position: fixed 
+		top: 0 
+		left: 0
+		height: 100%
+		width: 100%
+		z-index: 10
+		@extend .flex
+		flex-flow: column wrap 
+		justify-content: center
+		align-items: center 
+		color: white 
+		+rem('font-size', 14px)
+		text-align: center
+		&--title 
+			margin: 15px auto 
+			+rem('font-size', 42px)
+			font-weight: bold

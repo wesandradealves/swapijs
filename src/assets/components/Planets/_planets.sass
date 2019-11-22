@@ -1,0 +1,40 @@
+.view--planets
+	&-planet
+		width: 100%
+		text-align: center
+		color: white
+		font-weight: 300
+		max-width: 414px
+		margin: 0px auto 30px	
+		strong 
+			font-weight: bold
+		p 
+			+mq(812px, max)
+				+rem('font-size', 12px)
+		.itemHeader
+			color: $yellow
+			display: block 
+			margin-bottom: 15px
+			font-weight: 800
+			text-shadow: 0px 0px 10px $yellow
+			+rem('font-size', 40px)
+			+mq(812px, max)
+				+rem('fnt-size', 30px)
+			+transition(500ms)
+			+animation('glow', 500ms)
+	&-footer
+		@extend .flex 
+		flex-flow: row wrap
+		+mq(414px, max)
+			flex-flow: column wrap 
+			.btn
+				display: block
+				margin-left: 0
+				margin-right: 0
+				width: 100%
+				&:not(:last-of-type)
+					margin-bottom: 15px
+		justify-content: space-between
+		align-items: center
+		max-width: 414px
+		margin: 0 auto

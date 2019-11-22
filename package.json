@@ -1,0 +1,44 @@
+{
+  "name": "swapi-js",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "https://swapi-js-2.herokuapp.com/",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-lazy": "^1.1.0-beta.0",
+    "react-loader-spinner": "^2.3.0",
+    "react-parallax-mousemove": "^1.1.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "3.0.0",
+    "sass": "^1.20.1",
+    "sass-rem": "^2.0.1",
+    "shuffle-array": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "server": "cd api && node server",
+    "client": "cd src && npm start",
+    "test": "react-scripts test",
+    "dev": "concurrently --kill-others-on-fail \"npm run client\" \"npm run sass\" \"npm run server\" ",
+    "sass": "sass --watch src/assets/scss:src",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
